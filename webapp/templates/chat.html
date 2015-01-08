@@ -1,0 +1,37 @@
+<div id="settings" style="padding-top: 10px">
+    <button class="btn btn-default center-block" ng-click="toggleSettingsCollapse()">Settings</button>
+    <div collapse="isSettingsCollapsed" style="padding-top: 10px">
+        <div class="well well-lg">
+            <button ng-click="toggleRoomCollapse()" class="btn btn-default">Create room</button>
+            <button class="btn btn-default" ng-click="toggleInviteCollapse()">Send invite</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span ng-repeat="room in rooms">
+                <button class="btn btn-default btn-success">{{room.name}}</button>
+            </span>
+            <div collapse="isCreateRoomCollapsed">
+                <input style="width: 200px; margin-top: 10px" ng-model="roomName" class="form-control" placeholder="Input room name" name="create-room">
+                <button ng-click="createRoom()" style="margin-top: 10px" class="btn btn-default">Create</button>
+            </div>
+            <div collapse="isInviteCollapsed">
+                <input style="width: 200px; margin-top: 10px" ng-model="invitedName" class="form-control" placeholder="Send invite" name="send-invite">
+                <button ng-click="sendInvite()" style="margin-top: 10px" class="btn btn-default">Send invite</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" style="padding-top: 10px">
+    <div>
+        <textarea ng-model="message" class="form-control" style="width: 100%"></textarea>
+        <p style="padding-top: 10px">
+            <button class="btn btn-default pull-right" ng-click="sendMessage()">Send</button>
+        </p>
+    </div>
+    <div infinite-scroll="myPagingFunction()">
+        <div class="comments-box" ng-repeat="comment in comments">
+            <div class="comment">
+                <p style="font-weight:bold">{{comment.author}}</p>
+                <p>{{comment.text}}</p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html class="no-js" ng-app="reChat">
+  <head>
+    <meta charset="utf-8">
+    <title>ReChat</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-swidth">
+
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <!--<link rel="stylesheet" type="text/css" href="css/bootstrap-switch.css" />-->
+
+    <script type="text/javascript" src="lib/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/full/bootstrap.js"></script>
+    <script type="text/javascript" src="lib/full/angular.js"></script>
+    <script type="text/javascript" src="lib/full/angular-route.js"></script>
+    <script type="text/javascript" src="lib/full/ng-infinite-scroll.js"></script>
+    <script type="text/javascript" src="lib/full/ui-bootstrap-tpls.js"></script>
+    <!--<script type="text/javascript" src="lib/full/bootstrap-switch.js"></script>-->
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+
+
+    <!--<link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="css/main_.css">
+    <script src="bootstrap/js/jquery.min.js"></script>
+    <script src="bootstrap/js/affix.js"></script>
+    <script src="bootstrap/js/alert.js"></script>
+    <script src="bootstrap/js/dropdown.js"></script>
+    <script src="bootstrap/js/tooltip.js"></script>
+    <script src="bootstrap/js/modal.js"></script>
+    <script src="bootstrap/js/transition.js"></script>
+    <script src="bootstrap/js/button.js"></script>
+    <script src="bootstrap/js/popover.js"></script>
+    <script src="bootstrap/js/carousel.js"></script>
+    <script src="bootstrap/js/scrollspy.js"></script>
+    <script src="bootstrap/js/collapse.js"></script>
+    <script src="bootstrap/js/tab.js"></script>
+    <script src="js/jsonrpc.js"></script>
+    <script src="js/main.js"></script>-->
+
+  </head>
+  <body>
+
+    <!--[if lt IE 10]>
+      <!--<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>-->
+    <!--<![endif]-->
+        <!--<div class="navbar navbar-inverse navbar-static-top" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">Welcome, {{user}}!</a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <div class="row">
+                <div class="col-sm-6">
+                  <ul class="nav navbar-nav navbar-left">
+                    <li class="active"><a href="/">Account information</a></li>
+                  </ul>
+                </div>
+                <div class="col-sm-3">
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="" onclick="logout()">Logout</a></li>
+                  </ul>
+                  <button type="button" class="btn btn-success navbar-btn navbar-right" onclick="logout()">Logout</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>-->
+
+  <div ng-controller="HeaderCtrl" ng-include="'/templates/header.html'"></div>
+  <div ng-view></div>
+
+  <!-- Init application -->
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript" src="js/controllers/feedCtrl.js"></script>
+  <script type="text/javascript" src="js/controllers/chatCtrl.js"></script>
+  <script type="text/javascript" src="js/controllers/headerCtrl.js"></script>
+
+</body>
+</html>

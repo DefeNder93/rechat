@@ -1,0 +1,18 @@
+<div class="container" style="padding-top: 10px">
+    <div>
+        <textarea class="form-control" ng-model="message" style="width: 100%"></textarea>
+        <p style="padding-top: 10px">
+            <button class="btn btn-default pull-right" ng-click="sendMessage()">Send</button>
+        </p>
+    </div>
+    <div infinite-scroll="myPagingFunction()">
+        <div class="comments-box" ng-repeat="comment in comments">
+            <div class="comment">
+                <p style="font-weight:bold">{{comment.author}}</p>
+                <p>{{comment.text}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
